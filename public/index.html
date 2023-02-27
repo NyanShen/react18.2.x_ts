@@ -25,10 +25,120 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      .root {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      /* * 刷新进入页面动画 * */
+      div.enter-screen {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        color: #202214;
+        background: #202214;
+        text-align: center;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.8rem;
+        letter-spacing: 4px;
+        font-family: 'Press Start 2P', cursive;
+        text-transform: capitalize;
+        text-rendering: optimizeSpeed;
+      }
+  
+  
+      @keyframes blur {
+  
+        50%,
+        80% {
+          color: #FFF;
+          filter: blur(0px);
+        }
+      }
+  
+      div.enter-screen span {
+        color: #202214;
+        /* color: #FFF; */
+        animation: blur 2s infinite;
+        font-family: inherit;
+        filter: blur(50px);
+      }
+  
+      div.enter-screen span:nth-of-type(1) {
+        animation-delay: 0s;
+      }
+  
+      div.enter-screen span:nth-of-type(2) {
+        animation-delay: 0.04s;
+      }
+  
+      div.enter-screen span:nth-of-type(3) {
+        animation-delay: 0.08s;
+      }
+  
+      div.enter-screen span:nth-of-type(4) {
+        animation-delay: 0.12s;
+      }
+  
+      div.enter-screen span:nth-of-type(5) {
+        animation-delay: 0.2s;
+      }
+  
+      div.enter-screen span:nth-of-type(6) {
+        animation-delay: 0.24s;
+      }
+  
+      div.enter-screen span:nth-of-type(7) {
+        animation-delay: 0.28s;
+      }
+  
+      div.enter-screen span:nth-of-type(8) {
+        animation-delay: 0.32s;
+      }
+  
+      div.enter-screen span:nth-of-type(9) {
+        animation-delay: 0.36s;
+      }
+  
+      div.enter-screen span:nth-of-type(10) {
+        animation-delay: 0.4s;
+      }
+  
+      @media (max-width: 375px) {
+        div.enter-screen {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="root">
+        <div class="enter-screen">
+          <span>m</span>
+          <span>i</span>
+          <span>c</span>
+          <span>r</span>
+          <span>o</span>
+          <span>s</span>
+          <span>c</span>
+          <span>o</span>
+          <span>p</span>
+          <span>e</span>
+        </div>
+      </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
